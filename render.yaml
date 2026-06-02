@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pollo-mcp
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: POLLO_API_KEY
+        sync: false
+      - key: SERVER_URL
+        generateValue: false
